@@ -194,7 +194,7 @@ assign Y[3] = C1;
 //Module_FA g5D(X[13],Y[13],C[12],Res[13],C[13]);
 //Module_FA g5E(X[14],Y[14],C[13],Res[14],C[14]);
 //Module_HA g5F(CER[6],C[14],Res[15],OV);
-
+wire _unused = &{CE[9], 1'b0};
 endmodule 
 
 
@@ -272,7 +272,7 @@ module PAC(
     output carry
 );
 wire C1,C2,C3,C4,C5,C11,C12,C13;
-wire S1,S2,S3;
+wire S1,S2,S3,S4;
 
 // Implementing C proposed
     and A1 (C1,X1,X2);
@@ -291,7 +291,7 @@ wire S1,S2,S3;
     and A34 (S3,C1,C3);
     or XA2 (S4,S1,S2);
     or ada (sum,S4,S3);
-
+    wire _unused = &{C1,C2,C3,C4,C5,C11,C12,C13,1'b0};
 
 endmodule
 
@@ -315,6 +315,8 @@ wire [15:0] Layer3P;
 wire [15:0] Layer4G;
 wire [15:0] Layer4P;
 wire G00,G10,G20,G30,G40,G50,G60,G70,G80,G90,G100,G110,G120,G130,G140,G150;
+
+wire _unused = &{G150,Layer0G,Layer0P,Layer1G,Layer1P,Layer2G,Layer2P,Layer3G,Layer3P,Layer4G,Layer4P,1'b0};
 //Level-0
     genvar i;
 	 generate 
