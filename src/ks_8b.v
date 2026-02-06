@@ -292,6 +292,8 @@ wire S1,S2,S3,S4;
     or XA2 (S4,S1,S2);
     or ada (sum,S4,S3);
     wire _unused = &{C1,C2,C3,C4,C5,C11,C12,C13,1'b0};
+    assign {C2, C4, C5, C11, C12, C13} = 6'b0;
+
 
 endmodule
 
@@ -312,11 +314,18 @@ wire [15:0] Layer2G;
 wire [15:0] Layer2P;
 wire [15:0] Layer3G;
 wire [15:0] Layer3P;
-wire [15:0] Layer4G;
-wire [15:0] Layer4P;
+
 wire G00,G10,G20,G30,G40,G50,G60,G70,G80,G90,G100,G110,G120,G130,G140,G150;
 
-wire _unused = &{G150,Layer0G,Layer0P,Layer1G,Layer1P,Layer2G,Layer2P,Layer3G,Layer3P,Layer4G,Layer4P,1'b0};
+wire _unused = &{G150,Layer0G,Layer0P,Layer1G,Layer1P,Layer2G,Layer2P,Layer3G,Layer3P,1'b0};
+assign Layer3G[3:0] = 4'b0000;
+assign Layer3P[7:0] = 8'b00000000;
+assign Layer2G[1:0] = 2'b00;
+assign Layer2P[3:0] = 4'b0000;
+assign Layer1G[0]   = 1'b0;
+assign Layer1P[1:0] = 2'b00;
+
+
 //Level-0
     genvar i;
 	 generate 
