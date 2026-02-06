@@ -12,9 +12,6 @@ You can also include images in this folder and reference them in the markdown. E
 Approximate multiplier
 
 ## How to test
-
-Explain how to use your project
-
 comm = 1 for inputing A
 comm = 2 for inputing B
 comm = 3 for outputing LSByte of Product
