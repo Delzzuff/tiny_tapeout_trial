@@ -6,7 +6,7 @@ SIM ?= icarus
 FST ?= -fst # Use more efficient FST format
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = project.v
+PROJECT_SOURCES = tt_Delzzuff_8b_approx_multiplier.v multiplier_wrapper.v ks_8b.v
 
 ifneq ($(GATES),yes)
 
