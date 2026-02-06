@@ -667,4 +667,5 @@ or g1(W1,A0,A1);
 or g2(W2,A2,W1);
 or g3(S,A3,W2);
 
-endmodule `timescale 1ns / 1ps
+endmodule 
+
