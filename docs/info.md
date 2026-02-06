@@ -9,12 +9,17 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+Approximate multiplier
 
 ## How to test
 
 Explain how to use your project
 
-## External hardware
+comm = 1 for inputing A
+comm = 2 for inputing B
+comm = 3 for outputing LSByte of Product
+comm = 4 for outputing MSByte of Product
 
+## External hardware
+None
 List external hardware used in your project (e.g. PMOD, LED display, etc), if any
